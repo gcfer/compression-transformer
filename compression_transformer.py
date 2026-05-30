@@ -15,13 +15,13 @@ from torch import nn
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from codex_compression.entropy import (  # noqa: E402
+from arithmetic import (  # noqa: E402
     ArithmeticDecoder,
     ArithmeticEncoder,
     BitInputStream,
     BitOutputStream,
 )
-from codex_compression.models import StaticFrequencyModel, probs_to_counts  # noqa: E402
+from frequency import StaticFrequencyModel, probs_to_counts  # noqa: E402
 
 
 class ByteTransformer(nn.Module):
